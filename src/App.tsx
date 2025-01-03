@@ -1,4 +1,6 @@
-import { cn, pp } from "@/lib/utils.ts";
+import { cn, pp } from "&/utils.ts";
+import { NavGroup, NavItem } from "~/Navigation";
+import { Outlet } from "react-router";
 
 function App() {
     return (
@@ -22,7 +24,7 @@ function App() {
                             "px-4 sm:px-6 md:px-8"
                         )}>
                         <a href="/" className="flex items-center flex-grow-0 gap-2 select-none">
-                            <img src={pp("icon-sq.svg")} className="w-8 h-8" />
+                            <img src={pp("icon-sq.svg")} className="w-8 h-8" alt="Xellanix logo" title="Xellanix" />
                             <span className="text-3xl font-extrabold">UI Kit</span>
                         </a>
 
@@ -32,7 +34,7 @@ function App() {
                             href="https://github.com/xellanix/"
                             target="_blank"
                             rel="noopener noreferrer">
-                            <img src={pp("github-mark.svg")} className="w-5 h-5" />
+                            <img src={pp("github-mark.svg")} className="w-5 h-5" alt="GitHub logo" title="GitHub" />
                         </a>
                     </div>
                 </div>
@@ -52,146 +54,30 @@ function App() {
                         "w-72 h-[calc(100%-theme(margin.4))] lg:h-[calc(100%-theme(margin.6))]",
                         "mb-4 lg:mb-6",
                         "pr-4",
-                        "overflow-y-scroll",
+                        "overflow-y-auto",
                         "bg-inherit"
                     )}>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-                    amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit.
+                    <nav>
+                        <ul className="font-bold flex flex-col gap-4">
+                            <NavGroup name="Buttons">
+                                <NavItem href="/">Button</NavItem>
+                                <NavItem href="/toggle-buttons">Toggle Button</NavItem>
+                                <NavItem href="/check-boxs">Check Box</NavItem>
+                            </NavGroup>
+                        </ul>
+                    </nav>
                 </section>
                 <section
                     className={cn(
                         "flex flex-col flex-1",
                         "ml-8",
-                        "overflow-y-scroll",
+                        "overflow-y-auto",
                         "pr-[calc(theme(margin.8xl/2)+theme(padding.4)+theme(margin.8))]",
                         "sm:pr-[calc(theme(margin.8xl/2)+theme(padding.6)+theme(margin.8))]",
                         "md:pr-[calc(theme(margin.8xl/2)+theme(padding.8)+theme(margin.8))]",
                         "bg-inherit"
                     )}>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam vel
-                        fugit, repudiandae nulla soluta sed illo ducimus, aliquid deserunt aperiam
-                        at dicta reiciendis laborum molestiae perspiciatis amet officia similique
-                        culpa tenetur corporis mollitia. Tempora porro quas, quam sequi, eos numquam
-                        animi atque voluptas minima ea voluptate dolor est? Fugit nam libero
-                        sapiente magni tenetur obcaecati eveniet blanditiis consectetur sint veniam
-                        neque nulla corrupti reprehenderit corporis optio, sequi consequatur
-                        exercitationem nemo assumenda laborum placeat? Voluptates aperiam eaque
-                        temporibus sequi, eos voluptas tempore in sed velit quia repellendus iure ex
-                        odit accusamus explicabo, eius, quis vel quibusdam. Sint iusto porro sunt.
-                    </p>
+                    <Outlet />
                 </section>
             </main>
         </div>
