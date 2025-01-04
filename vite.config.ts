@@ -15,5 +15,13 @@ export default defineConfig({
 	plugins: [react()],
 	build: {
 		minify: true,
+		assetsInlineLimit: 0,
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					"comlink-worker": ["comlink"],
+				},
+			},
+		},
 	},
 });

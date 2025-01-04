@@ -23,8 +23,13 @@ function App() {
                             "py-4",
                             "px-4 sm:px-6 md:px-8"
                         )}>
-                        <a href="/" className="flex items-center flex-grow-0 gap-2 select-none">
-                            <img src={pp("icon-sq.svg")} className="w-8 h-8" alt="Xellanix logo" title="Xellanix" />
+                        <a href="/" className="flex items-center flex-grow-0 gap-2 select-none outline-2 outline-offset-4">
+                            <img
+                                src={pp("icon-sq.svg")}
+                                className="w-8 h-8"
+                                alt="Xellanix logo"
+                                title="Xellanix"
+                            />
                             <span className="text-3xl font-extrabold">UI Kit</span>
                         </a>
 
@@ -33,8 +38,14 @@ function App() {
                         <a
                             href="https://github.com/xellanix/"
                             target="_blank"
-                            rel="noopener noreferrer">
-                            <img src={pp("github-mark.svg")} className="w-5 h-5" alt="GitHub logo" title="GitHub" />
+                            rel="noopener noreferrer"
+                            className="outline-2 outline-offset-4">
+                            <img
+                                src={pp("github-mark.svg")}
+                                className="w-5 h-5"
+                                alt="GitHub logo"
+                                title="GitHub"
+                            />
                         </a>
                     </div>
                 </div>
@@ -44,19 +55,20 @@ function App() {
                     "flex flex-row",
                     "h-full overflow-y-hidden",
                     "ml-8xl/2",
-                    "pt-4 lg:pt-6",
-                    "pl-4 sm:pl-6 md:pl-8",
                     "bg-inherit"
                 )}>
                 <section
                     className={cn(
                         "flex flex-col",
-                        "w-72 h-[calc(100%-theme(margin.4))] lg:h-[calc(100%-theme(margin.6))]",
+                        "relative",
+                        "w-72 h-full",
                         "mb-4 lg:mb-6",
-                        "pr-4",
+                        "pr-4 pl-4 sm:pl-6 md:pl-8",
                         "overflow-y-auto",
                         "bg-inherit"
                     )}>
+                    <div className="curtain t"></div>
+
                     <nav>
                         <ul className="font-bold flex flex-col gap-4">
                             <NavGroup name="Buttons">
@@ -66,18 +78,25 @@ function App() {
                             </NavGroup>
                         </ul>
                     </nav>
+
+                    <div className="curtain b"></div>
                 </section>
                 <section
                     className={cn(
                         "flex flex-col flex-1",
+                        "relative",
                         "ml-8",
                         "overflow-y-auto",
-                        "pr-[calc(theme(margin.8xl/2)+theme(padding.4)+theme(margin.8))]",
-                        "sm:pr-[calc(theme(margin.8xl/2)+theme(padding.6)+theme(margin.8))]",
-                        "md:pr-[calc(theme(margin.8xl/2)+theme(padding.8)+theme(margin.8))]",
+                        "pr-[calc(theme(margin.8xl/2)+theme(padding.4))]",
+                        "sm:pr-[calc(theme(margin.8xl/2)+theme(padding.6))]",
+                        "md:pr-[calc(theme(margin.8xl/2)+theme(padding.8))]",
                         "bg-inherit"
                     )}>
+                    <div className="curtain t"></div>
+
                     <Outlet />
+
+                    <div className="curtain b"></div>
                 </section>
             </main>
         </div>

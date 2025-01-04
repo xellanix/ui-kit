@@ -23,6 +23,7 @@ function isString(input: string | IButtonClassNames): input is string {
 export function Button({ className, styleType, children, ...props }: ButtonProps) {
     return (
         <button
+            type="button"
             className={cn(
                 "btn",
                 styleType,

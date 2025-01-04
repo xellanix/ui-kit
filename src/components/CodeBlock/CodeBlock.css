@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.xellanix-code-block {
+	@apply [--pre-background-color:#eff1f5];
+	@apply [--code-tag-cage-color:#9ca0b0];
+	@apply [--code-element-color:#d20f39];
+	@apply [--code-property-color:#006aee99];
+	@apply [--code-brackets-color:#04a5e5];
+	@apply [--code-variable-color:#798baf];
+	@apply [--code-operator-color:#8839ef];
+	@apply [--code-string-color:#40a02b];
+	@apply [--code-quote-color:#40a02b];
+	@apply [--code-function-color:#e19235];
+	@apply [--code-parameter-color:#00b6c2];
+	@apply [--code-type-color:#006aee99];
+	@apply [--code-keyword-color:#d20f39];
+	@apply [--code-numeric-color:#006aee];
+	@apply [--code-comment-color:#9ca0b0];
+	@apply [--code-constant-color:#a2e57b];
+	@apply [--code-character-color:#374151];
+
+	@apply dark:[--pre-background-color:#273136];
+	@apply dark:[--code-tag-cage-color:#8b9798];
+	@apply dark:[--code-element-color:#ff6d7e];
+	@apply dark:[--code-property-color:#7cd5f1];
+	@apply dark:[--code-brackets-color:#ffed72];
+	@apply dark:[--code-variable-color:#b6bfbd];
+	@apply dark:[--code-operator-color:#ff6d7e];
+	@apply dark:[--code-string-color:#ffed72];
+	@apply dark:[--code-quote-color:#8b9798];
+	@apply dark:[--code-function-color:#a2e57b];
+	@apply dark:[--code-parameter-color:#ffb270];
+	@apply dark:[--code-type-color:#7cd5f1];
+	@apply dark:[--code-keyword-color:#ff6d7e];
+	@apply dark:[--code-numeric-color:#baa0f8];
+	@apply dark:[--code-comment-color:#6b7678];
+	@apply dark:[--code-constant-color:#a2e57b];
+	@apply dark:[--code-character-color:#e5e7eb];
+
+	@apply text-gray-700;
+	@apply dark:text-gray-200;
+}
+
+.xellanix-code-block > div {
+	@apply p-2 flex flex-row items-center flex-wrap gap-x-12 bg-gray-200 border-b-[0.09375rem] border-gray-300 rounded-t-[calc(theme(borderRadius.xl)-0.0625rem)];
+	@apply dark:bg-gray-800 dark:border-gray-700;
+}
+.xellanix-code-block > div > label {
+	@apply py-2 px-3 flex flex-1 text-sm font-semibold select-none;
+}
+
+.xellanix-code-block > pre {
+	@apply bg-[--pre-background-color] p-4 overflow-auto box-border text-base m-0 rounded-b-[calc(theme(borderRadius.xl)-0.0625rem)];
+}
+
+.xellanix-code-block > pre > div {
+	@apply inline-flex mr-4;
+}
+
+.xellanix-code-block > pre code {
+	@apply [tab-size:4];
+}
+
+.xellanix-code-block > pre code .tc {
+	/* tag cage */
+	@apply text-[--code-tag-cage-color];
+}
+.xellanix-code-block > pre code .el {
+	/* element */
+	@apply text-[--code-element-color];
+}
+.xellanix-code-block > pre code .pr {
+	/* property */
+	@apply text-[--code-property-color] italic;
+}
+.xellanix-code-block > pre code .bc,
+.xellanix-code-block > pre code .sq {
+	/* brackets and square brackets */
+	@apply text-[--code-brackets-color];
+}
+.xellanix-code-block > pre code .vr {
+	/* variable */
+	@apply text-[--code-variable-color];
+}
+.xellanix-code-block > pre code .op {
+	/* operator */
+	@apply text-[--code-operator-color];
+}
+.xellanix-code-block > pre code .st {
+	/* string */
+	@apply text-[--code-string-color];
+}
+.xellanix-code-block > pre code .qt {
+	/* quote */
+	@apply text-[--code-quote-color];
+}
+.xellanix-code-block > pre code .fn {
+	/* function */
+	@apply text-[--code-function-color];
+}
+.xellanix-code-block > pre code .pm {
+	/* parameter */
+	@apply text-[--code-parameter-color] italic;
+}
+.xellanix-code-block > pre code .ty {
+	/* type */
+	@apply text-[--code-type-color] italic;
+}
+.xellanix-code-block > pre code .kw {
+	/* keyword */
+	@apply text-[--code-keyword-color] italic;
+}
+.xellanix-code-block > pre code .nm {
+	/* numeric */
+	@apply text-[--code-numeric-color];
+}
+.xellanix-code-block > pre code .cm {
+	/* comment */
+	@apply text-[--code-comment-color] italic;
+}
+.xellanix-code-block > pre code .ch {
+	/* character */
+	@apply text-[--code-character-color];
+}

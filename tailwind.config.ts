@@ -30,6 +30,6 @@ export default {
 			sans: ["Figtree", "sans-serif"],
 		},
 	},
-	darkMode: "media",
+	darkMode: ["selector", '[data-mode="dark"]'],
 	plugins: [],
 } satisfies Config;

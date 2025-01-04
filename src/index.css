@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		color-scheme: dark;
-	}
+*:root {
+	@apply dark:[color-scheme:dark];
+}
+
+.curtain {
+	@apply sticky left-0 right-0 z-10 min-h-4 lg:min-h-8 from-gray-100 dark:from-gray-900 from-20%;
+}
+.curtain.t {
+	@apply top-0 bg-gradient-to-b;
+}
+.curtain.b {
+	@apply bottom-0 bg-gradient-to-t;
+}
+.curtain.t + * {
+	@apply -my-2;
+}
+
+.card-ring {
+	@apply ring-1 ring-inset ring-gray-300 dark:ring-gray-700 rounded-xl p-[0.0625rem];
 }
